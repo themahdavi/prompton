@@ -1,36 +1,36 @@
-FROM php:8.2-fpm
-
-# Arguments defined in docker-compose.yml
-# ARG user
-# ARG uid
+# Use the official PHP image with Alpine
+FROM php:8.2-fpm-alpine
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
+RUN apk add --no-cache \
     libpng-dev \
-    libonig-dev \
-    libxml2-dev \
-    zip \
-    unzip
+    libjpeg-turbo-dev \
+    libwebp-dev \
+    libxpm-dev \
+    freetype-dev \
+    libzip-dev \
+    git \
+    bash \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd zip
 
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
-
-
-# Set working directory
-WORKDIR /var/www
-
-# Add user for laravel application
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
-
-# Get latest Composer
+# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY --chown=www:www . /var/www
+# Set the working directory
+WORKDIR /var/www/html
 
-RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+# Copy the existing application directory contents
+COPY . .
+
+# Install PHP dependencies
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+
+# Set permissions for storage and bootstrap/cache
+RUN chown -R www-data:www-data storage bootstrap/cache
+
+# Expose port 9000
+EXPOSE 80
+
+# Start PHP-FPM server
+CMD ["php-fpm"]
