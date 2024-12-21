@@ -25,7 +25,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Install PHP dependencies
-RUN /usr/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
+RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 
 # Set permissions for storage and bootstrap/cache
 RUN chown -R www-data:www-data storage bootstrap/cache
