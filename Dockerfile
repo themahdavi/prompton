@@ -33,4 +33,4 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 COPY --chown=www:www . /var/www
 
-RUN /usr/local/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
