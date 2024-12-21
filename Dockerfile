@@ -12,13 +12,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd zip pdo pdo_mysql
 
-COPY composer.json /var/www/html
-
 # Set working directory
 WORKDIR /var/www/html
-
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Install Composer
 RUN <<EOF
@@ -26,7 +21,7 @@ curl -sLS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --f
 EOF
 
 # Copy existing application directory permissions
-COPY --chown=www:www . /var/www
+COPY . .
 
 # Install Laravel dependencies
 RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
