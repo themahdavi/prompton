@@ -1,0 +1,3 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+@import '/resources/css/fonts.css';
+@config 'tailwind.config.js';
