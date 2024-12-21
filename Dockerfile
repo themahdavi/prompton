@@ -3,8 +3,25 @@ FROM php:8.2-fpm
 # Install PostgreSQL extension
 # TODO: move this part to the base image
 RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    curl \
     libpq-dev \
-    && docker-php-ext-install pdo_pgsql pgsql
+    libpng-dev \
+    libzip-dev \
+    libonig-dev \
+    libxml2-dev \
+    zip \
+    supervisor \
+    && docker-php-ext-install \
+        pdo_mysql \
+        mbstring \
+        zip \
+        exif \
+        pcntl \
+        bcmath \
+        gd \
+        opcache
 
 # Copy composer.lock and composer.json
 COPY composer.json /var/www/
