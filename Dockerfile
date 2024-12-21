@@ -2,7 +2,7 @@
 FROM php:8.2-fpm
 
 # Set working directory
-WORKDIR /var/www
+WORKDIR /var/www/html
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -25,7 +25,7 @@ COPY . .
 RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 
 # Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Expose port 9000
 EXPOSE 9000
