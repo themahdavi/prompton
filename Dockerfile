@@ -22,7 +22,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY . .
 
 # Install Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
