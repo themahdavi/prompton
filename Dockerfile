@@ -23,6 +23,9 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy existing application directory permissions
 COPY . .
 
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
 # Install Laravel dependencies
 RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 RUN cp /var/www/html/.env.example .env
