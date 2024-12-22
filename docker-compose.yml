@@ -5,7 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: "doc.env"
+    env_file: 
+      - doc.env
     image: laravel-app
     container_name: laravel_app
     restart: unless-stopped
