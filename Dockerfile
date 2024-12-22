@@ -27,6 +27,7 @@ COPY . .
 RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
 RUN cp /var/www/html/.env.example .env
 RUN php artisan key:generate
+RUN php artisan migrate --seed
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
