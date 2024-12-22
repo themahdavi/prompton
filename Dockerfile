@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     git \
+    nano \
     sqlite3 libsqlite3-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd zip pdo pdo_mysql pdo_sqlite
@@ -24,7 +25,8 @@ COPY . .
 
 # Install Laravel dependencies
 RUN /usr/bin/composer install --ignore-platform-reqs --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
-
+RUN cp /var/www/html/.env.example .env
+RUN php artisan key:generate
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 

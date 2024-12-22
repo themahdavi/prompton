@@ -1,0 +1,78 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DJwIDXiP.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-BwKepBZi.css",
+    "src": "resources/css/filament/admin/theme.css",
+    "isEntry": true
+  },
+  "resources/fonts/IRANSansWeb(FaNum).eot": {
+    "file": "assets/IRANSansWeb(FaNum)-C33tsBWO.eot",
+    "src": "resources/fonts/IRANSansWeb(FaNum).eot"
+  },
+  "resources/fonts/IRANSansWeb(FaNum).ttf": {
+    "file": "assets/IRANSansWeb(FaNum)-CejdoTbN.ttf",
+    "src": "resources/fonts/IRANSansWeb(FaNum).ttf"
+  },
+  "resources/fonts/IRANSansWeb(FaNum).woff2": {
+    "file": "assets/IRANSansWeb(FaNum)-CmozMVYU.woff2",
+    "src": "resources/fonts/IRANSansWeb(FaNum).woff2"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Bold.eot": {
+    "file": "assets/IRANSansWeb(FaNum)_Bold-nIvcOc-e.eot",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Bold.eot"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Bold.ttf": {
+    "file": "assets/IRANSansWeb(FaNum)_Bold-pJLJ1XzP.ttf",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Bold.ttf"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Bold.woff2": {
+    "file": "assets/IRANSansWeb(FaNum)_Bold-BIlCKSwe.woff2",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Bold.woff2"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Light.eot": {
+    "file": "assets/IRANSansWeb(FaNum)_Light-G19OWR_v.eot",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Light.eot"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Light.ttf": {
+    "file": "assets/IRANSansWeb(FaNum)_Light-BFOzWhIR.ttf",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Light.ttf"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Light.woff2": {
+    "file": "assets/IRANSansWeb(FaNum)_Light-pCsU8tVc.woff2",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Light.woff2"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Medium.eot": {
+    "file": "assets/IRANSansWeb(FaNum)_Medium-an_lS90s.eot",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Medium.eot"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Medium.ttf": {
+    "file": "assets/IRANSansWeb(FaNum)_Medium-D0Z-saUm.ttf",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Medium.ttf"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_Medium.woff2": {
+    "file": "assets/IRANSansWeb(FaNum)_Medium-BU5JQRwu.woff2",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_Medium.woff2"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_UltraLight.eot": {
+    "file": "assets/IRANSansWeb(FaNum)_UltraLight-Dg6ueGaa.eot",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_UltraLight.eot"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_UltraLight.ttf": {
+    "file": "assets/IRANSansWeb(FaNum)_UltraLight-BHJNN-M3.ttf",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_UltraLight.ttf"
+  },
+  "resources/fonts/IRANSansWeb(FaNum)_UltraLight.woff2": {
+    "file": "assets/IRANSansWeb(FaNum)_UltraLight-BBXCXGs_.woff2",
+    "src": "resources/fonts/IRANSansWeb(FaNum)_UltraLight.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Xaw6OIO1.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
